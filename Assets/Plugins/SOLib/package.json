@@ -1,0 +1,11 @@
+﻿{
+  "name": "moe.dyedmagenta.solib",
+  "version": "0.0.1",
+  "displayName": "Scriptable Object Library",
+  "description": "This package contains classes to help with scriptable object workflow",
+  "unity": "2022.2",
+  "author": {
+    "name": "dyedMagenta",
+    "email": "dyedmagenta@gmail.com"
+  }
+}
