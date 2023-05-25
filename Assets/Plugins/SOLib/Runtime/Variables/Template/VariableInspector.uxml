@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <uie:PropertyField name="InitialValuePropertyField" binding-path="initialValue" label="Initial value" />
+    <ui:Toggle label="Initialize OnEnable" name="InitializeToggle" binding-path="initialize" style="justify-content: flex-start; align-items: stretch; align-self: stretch;" />
+    <uie:PropertyField name="ValuePropertyField" binding-path="value" label="Value" />
+</ui:UXML>
