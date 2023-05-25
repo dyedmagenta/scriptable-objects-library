@@ -4,27 +4,14 @@ using SOLib.Variables;
 namespace SOLib.References
 {
     [Serializable]
-    public class BooleanReference
+    public class BooleanReference : ScriptableReference<bool>
     {
-        public bool useConstant = true;
-        public bool constantValue;
-        public BooleanVariable variable;
-
         public BooleanReference()
         {
         }
 
-        public BooleanReference(bool value)
+        public BooleanReference(bool value) : base(value)
         {
-            useConstant = true;
-            constantValue = value;
-        }
-
-        public bool Value => useConstant ? constantValue : variable.Value;
-
-        public static implicit operator bool(BooleanReference reference)
-        {
-            return reference.Value;
         }
     }
 }

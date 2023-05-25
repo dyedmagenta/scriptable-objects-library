@@ -4,27 +4,14 @@ using SOLib.Variables;
 namespace SOLib.References
 {
     [Serializable]
-    public class StringReference
+    public class StringReference : ScriptableReference<string>
     {
-        public bool useConstant = true;
-        public string constantValue;
-        public StringVariable variable;
-
         public StringReference()
         {
         }
 
-        public StringReference(string value)
+        public StringReference(string value) : base(value)
         {
-            useConstant = true;
-            constantValue = value;
-        }
-
-        public string Value => useConstant ? constantValue : variable.Value;
-
-        public static implicit operator string(StringReference reference)
-        {
-            return reference.Value;
         }
     }
 }
