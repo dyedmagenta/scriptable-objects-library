@@ -1,11 +1,13 @@
-﻿using UnityEditor;
+﻿using SOLib.Variables;
+using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine.UIElements;
+using static SOLib.Editor.AssetPaths;
 
-namespace SOLib.Variables.Editor
+namespace SOLib.Editor
 {
     [CustomEditor(typeof(ScriptableVariable<>), true)]
-    public class VariableDrawer : UnityEditor.Editor
+    public class VariableInspector : UnityEditor.Editor
     {
         private SerializedProperty initializeProperty;
         private SerializedProperty initialValueProperty;
@@ -103,9 +105,15 @@ namespace SOLib.Variables.Editor
         private void AddMultilineTextVariables(VisualElement container, PropertyField initializeField, SerializedProperty initializeProperty)
         {
             var initialValueFieldLabel = new Label(initialValueProperty.displayName);
+            initialValueFieldLabel.style.marginLeft = new StyleLength(3);
             container.Add(initialValueFieldLabel);
 
-            var initialValueField = new TextField { name = "PropertyField:" + initialValueProperty.propertyPath, multiline = true };
+            var initialValueField = new TextField
+            {
+                name = "PropertyField:" + initialValueProperty.propertyPath,
+                multiline = true,
+            };
+            initialValueField.style.marginBottom = new StyleLength(3);
             initialValueField.BindProperty(initialValueProperty);
             container.Add(initialValueField);
 
@@ -119,9 +127,11 @@ namespace SOLib.Variables.Editor
             });
 
             var valueFieldLabel = new Label(valueProperty.displayName);
+            valueFieldLabel.style.marginLeft = new StyleLength(3);
             container.Add(valueFieldLabel);
 
             var valueField = new TextField { name = "PropertyField:" + valueProperty.propertyPath, multiline = true };
+            valueField.style.marginBottom = new StyleLength(3);
             valueField.BindProperty(valueProperty);
             container.Add(valueField);
         }

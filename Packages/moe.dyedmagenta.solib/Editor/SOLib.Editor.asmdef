@@ -1,0 +1,16 @@
+{
+    "name": "SOLib.Editor",
+    "rootNamespace": "SOLib",
+    "references": [
+        "GUID:b1e63d7ad88967d4985ff208d9a7a366"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

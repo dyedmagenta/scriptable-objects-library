@@ -12,5 +12,10 @@ namespace Samples
         {
             floatReference = new FloatReference(12f);
         }
+
+        public void PrintValue()
+        {
+            Debug.Log(floatReference.Value + " " + booleanReference.Value);
+        }
     }
 }

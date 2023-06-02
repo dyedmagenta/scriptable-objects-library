@@ -1,7 +1,8 @@
-﻿using UnityEditor;
+﻿using SOLib.References;
+using UnityEditor;
 using UnityEngine;
 
-namespace SOLib.References.Editor
+namespace SOLib.Editor
 {
     [CustomPropertyDrawer(typeof(ScriptableReference<>), useForChildren: true)]
     public class BooleanReferenceDrawer : PropertyDrawer
